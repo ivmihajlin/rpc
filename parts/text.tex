@@ -1,4 +1,4 @@
-\section{section}
+\section{Section}
 
 \begin{theorem}
     \label{th:eq_oracle}
@@ -10,10 +10,45 @@
     \tilde{\Omega}(\R^2(f))$.
 \end{theorem}
 
+Our gadget: $g \coloneqq \IP_{\log n}$.
+
+To prove these theorems we show the following chain of inequatilies:
+\begin{itemize}
+    \item $\D^{\EQ}(f \circ g) \ge \Omega(\D_{dt}(f))$ where $f$ is an arbitrary function;
+    \item $\D_{dt}(f) \ge \Omega(\R_{dt}^2(f))$ for some concrete function $f$;
+    \item $\R(f \circ g) \le \tilde{O}(\R_{dt}(f))$ where $f$ is an arbitrary function.
+\end{itemize}
+
+
+
+Let start with the last inequality.
+
+\begin{lemma}
+    \label{lm:random_dt}
+    Let $f:\{0, 1\}^n \to \{0, 1\}$ be an arbitrary function. $\R(f \circ g) \le \tilde{O}(\R_{dt}(f))$.
+\end{lemma}
+
+\begin{proof}
+    TODO!!!
+\end{proof}
+
+\begin{lemma}[\ref{!!!}]
+    \label{lm:dt_rt_sep}
+    There exists a function such that $\D_{dt}(f) \ge \Omega(\R_{dt}^2(f))$.
+\end{lemma}
+
+
+The following Lemma we will prove in section \ref{!!!}
+
+\begin{lemma}
+    \label{lm:eq_simulation}
+    Let $f:\{0, 1\}^n \to \{0, 1\}$ be an arbitrary function. $\D^{\EQ}(f \circ g) \ge \Omega(\D_{dt}(f))$.
+\end{lemma}
+
+
 
 \begin{proof}[of Theorem \ref{th:eq_oracle}]
-    Let $g \coloneqq \IP_{\log n}$.
-
-    For all $f$ the following holds: $\D^{\EQ}(f \circ g) \ge \Omega(\D_{dt}(f))$. For some function $f$:
-    $\D_{dt}(f) \ge \Omega(\R_{dt}^2(f))$, and for all $f$: $\R(f \circ g) \le \tilde{O}(\R_{dt}(f))$.
+    Consider a function $f$ from Lemma \ref{lm:dt_rt_sep}. $\R(f \circ g) \le \tilde{O}(\R_{dt}(f))$ by
+    Lemma \ref{lm:random_dt} hence $\R(f \circ g) \le \tilde{O}(\D^2_{dt}(f))$ and $\R(f \circ g) \le
+    \tilde{O}(\D^2(f \circ g))$ by Lemma \ref{lm:eq_simulation}.
 \end{proof}
