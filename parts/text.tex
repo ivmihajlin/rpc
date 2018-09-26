@@ -1,0 +1,19 @@
+\section{section}
+
+\begin{theorem}
+    \label{th:eq_oracle}
+    There exsists a function $f$ such that $\D^{\EQ}(f) \ge \tilde{\Omega}(\R(f))$.
+\end{theorem}
+
+\begin{theorem}
+    For each constant $a > 0$ there is a function $f$ such that $\D^{\R[\log n^a]}(f) \ge
+    \tilde{\Omega}(\R^2(f))$.
+\end{theorem}
+
+
+\begin{proof}[of Theorem \ref{th:eq_oracle}]
+    Let $g \coloneqq \IP_{\log n}$.
+
+    For all $f$ the following holds: $\D^{\EQ}(f \circ g) \ge \Omega(\D_{dt}(f))$. For some function $f$:
+    $\D_{dt}(f) \ge \Omega(\R_{dt}^2(f))$, and for all $f$: $\R(f \circ g) \le \tilde{O}(\R_{dt}(f))$.
+\end{proof}
