@@ -1,0 +1,32 @@
+\section{Simulation}
+
+In this section we want to generalize lifting theorem \ref{!!!!}.
+
+\begin{definition}
+    We say that a function $f(x, y)$ is $\sigma$-\textit{good} iff communication matrix of this function
+    contains a monochromatic rectangle of uniform measure $\sigma$. 
+\end{definition}
+
+
+\begin{theorem}
+    Let $f:\{0, 1\}^n \to \{0, 1\}$ be an arbitrary function and $\S$ be a class of $\sigma$-good
+    functions and $g$ satisfy $(\delta, h)$-h.r.d. then $\D^{\S}(f \circ g) \ge \Omega(\sigma \D_{dt}(f))$.
+    % тут нужны граничные условия всякие.... да и вообще паршиво сформулировано, но без доказательства
+    % тяжело константы давать
+\end{theorem}
+
+To prove this Theorem we need the following lemmas.
+
+\begin{lemma}[\cite{GPW!!!, !!!!}]
+    For any $p \ge 2$, if $A \subseteq X^p$ is $\varphi$-avg.-thick then for every $\delta \in (0, 1)$
+    there is a $\frac{\delta}{p} \varphi$-thick subset $A' \subseteq A$ with $|A'| \ge (1 - \delta)
+    |A|$.
+\end{lemma}
+
+
+\begin{lemma}[\cite{!!!!}]
+    Let $h \ge 1$, $p \ge 2$ and $i \in [p]$ be integers and $\delta, \tau, \varphi \in (0, 1)$ be reals,
+    where $\tau \ge 2^{-h}$. Consider a function $g: X \times Y \to \{0, 1\}$ which has $(\delta,
+    h)$-h.r.d. Suppose $A \times B \subseteq X^p \times Y^p$ is a nonempty $\tau$-thick rectangle, and
+    suppose also that $d_{avg}(A, i) \le \varphi |X|$. Then for any $c \in \{0, 1\}$
+\end{lemma}
