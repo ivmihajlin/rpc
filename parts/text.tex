@@ -2,12 +2,20 @@
 
 \begin{theorem}
     \label{th:eq_oracle}
-    There exsists a function $f$ such that $\D^{\EQ}(f) \ge \tilde{\Omega}(\R(f))$.
+    There exsists a function $f$ such that $\D^{\EQ}(f) \ge \tilde{\Omega}(\R(f)^2)$.
 \end{theorem}
 
+
+\begin{proposition}
+  For any function $f$: $\R(f) \le t \D^{\R[t]}(f)$
+\end{proposition}
+
+Next theorem shows that one can not hope for this connection to be tight:
+
 \begin{theorem}
-    For each constant $a > 0$ there is a function $f$ such that $\D^{\R[\log n^a]}(f) \ge
-    \tilde{\Omega}(\R^2(f))$.
+    There is a function $f$ and constants $\alpha,\beta>0$ such that $\D^{\R[t]}(f) \ge t^{\alpha}$, but $\R(f) \le t^{\alpha + 1 - \beta}$.
+    
+    Todo: what are the values of $\alpha,\beta$?
 \end{theorem}
 
 Our gadget: $g \coloneqq \IP_{\log n}$.
